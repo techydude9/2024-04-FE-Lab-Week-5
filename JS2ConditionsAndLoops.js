@@ -80,7 +80,8 @@ Question 2: Is it time to wake up for work? \n`);
    let alarmSet = true;
    let weekDay = true;
 
-   if(alarmSet == true && weekDay == true) {
+ //  if(alarmSet == true && weekDay == true) { my original code
+   if(alarmSet && weekDay) {
       console.log("Sound Alarm! Time for work!");
    }
    else {
