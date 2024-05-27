@@ -5,6 +5,11 @@
    FE JS2 Lab
 */
 
+/* 
+   Week 5 Lab - Bob Ruzga solution
+   05/27/2024
+*/
+
 /** Key Terms:
  *  Boolean Operators
  *  Loop
@@ -45,7 +50,15 @@ Question 1: Driving the speed limit.. ? \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
+   let speedLimit = 70;
+   let mySpeed = 78;
 
+   if(mySpeed > speedLimit) {console.log("Slow Down! Mom is mad " + "I'm doing " + mySpeed);}
+   else if (mySpeed == speedLimit) {console.log("Everyone is happy!");}
+   else {
+      console.log("Speed up! Dad is mad!");
+   }
+// BJR: Tested all three test cases resulting in correct solutions
 
 /*-------------------------------------------------------*/
 
@@ -64,7 +77,17 @@ Question 2: Is it time to wake up for work? \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
+   let alarmSet = true;
+   let weekDay = true;
 
+   if(alarmSet == true && weekDay == true) {
+      console.log("Sound Alarm! Time for work!");
+   }
+   else {
+      console.log( "I can sleep in!" );
+   }
+
+// BJR: Works! tested for all 4 test cases
 
 /*-------------------------------------------------------*/
 
@@ -82,8 +105,15 @@ Question 3: Username & Password \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
+   let userName = "Timmy456";
+   let password = "12345";
 
+   if((userName == "Tommy123" && password == "12345") || (userName == "Timmy456" && password == "6789")) {
+         console.log("Admin Login Successful " + userName + " " + password);}
+   else
+      {console.log("Admin Access Denied " + userName + " " + password);}
 
+// BJR: Works! Tested for 5 test cases including using correct userName with opposite pwd and visa versa
 /*-------------------------------------------------------*/
 
 console.log(`--------------------------
@@ -102,7 +132,28 @@ Question 4: Student Class \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
+      let studentClass;
+      let studentGrade = 6;
 
+      if(studentGrade == 12) {
+         (studentClass = "Senior ");
+      } else if (studentGrade == 11) {
+         (studentClass = "Junior ");
+      } else if (studentGrade == 10) {
+         (studentClass = "Sophmore ");
+      } else if (studentGrade == 9) {
+         (studentClass = "Freshman ");
+      } else if (studentGrade >= 7 &&  studentGrade  <= 8) {
+         (studentClass = "Middle ");
+      } else if (studentGrade >= 0 && studentGrade <= 6) {
+         (studentClass = "Elementry ");
+      } else {
+         (studentClass = "not in school");
+      }
+
+      console.log("Student is in " + studentClass + " " + studentGrade);
+
+// BJR: Works! tested all values between -1 and 13 to see that I get correct results
 
 /*-------------------------------------------------------*/
 
@@ -117,7 +168,33 @@ Question 5: Loops! \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
+      console.log("Step 1 - for loop");
 
+      for (let i = 10; i >= -10; i--) {
+         console.log(i);
+      }
+
+      console.log("Step 2 - do/while loop");
+
+      let i = 0;
+      
+      do {
+         i++;
+         console.log(i);
+      } while (i < 50);
+
+
+      console.log("Step 3 - revised do/while");
+      i = 0;
+
+      do {
+         i++;
+         if (i % 4 == 0) {
+         console.log(i);}
+      } while (i < 50);
+
+// BJR: It works! note to self: I originally coded the % in the while which only ran once
+      
 
 /*-------------------------------------------------------*/
 
@@ -131,13 +208,11 @@ Question 6: Debugging an infinite loop! \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
-   /*    
-   for (let i = 11; i > 10; i++) { 
+
+   for (let i = 1; i < 10; i++) { 
       console.log(i);   
    } 
-  */
-
-
-
-
+/* Infinite loop was caused by i already being greater than 10 so and incremented
+   past 10 so the condition would never be false to stop the loop */
+   
 console.log('-----------Finished------------')
